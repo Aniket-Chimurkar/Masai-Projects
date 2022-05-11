@@ -3,11 +3,19 @@ import axios from "axios"
 import { useParams } from "react-router"
 import { NavLink } from "react-router-dom"
 import Skeleton from "react-loading-skeleton"
+import {  useDispatch } from "react-redux"
+import { addCart } from "../Redux/action/index"
+import { delCart } from "../Redux/action/index"
 const Productpage=()=>{
     
     const {id} = useParams()
     const [product , setproduct] = useState([])
     const[loading , setLoading] = useState(false)
+
+    const dispatch = useDispatch();
+    const addProduct = (product)=>{
+        dispatch(addCart(product))
+    }
 
     useEffect(() => {
         getProduct();
@@ -51,7 +59,7 @@ const Productpage=()=>{
                   </p>
                   <h3 className="display-6 fw-bold my-4"> $ {product.price}</h3>
                   <p className="lead">{product.description}</p>
-                  <button className="btn btn-outline-dark">Add to cart</button>
+                  <button className="btn btn-outline-dark" onClick={()=>addProduct(product)}>Add to cart</button>
                   <NavLink to="/cart" className="btn btn-outline-dark ms-2">Go to cart</NavLink>
                  
               </div>
