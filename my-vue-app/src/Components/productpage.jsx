@@ -32,13 +32,11 @@ const Productpage=()=>{
       const Loading =()=>{
           return(
               <>
-            <div className="col-md-6">
-                <Skeleton height={400}/>
-            </div>
-            <div className="col-md-6">
-            <Skeleton height={50} width={300}/>
-            <Skeleton height={75} width={400}/>
-            </div>
+          <div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
               </>
           )
       }

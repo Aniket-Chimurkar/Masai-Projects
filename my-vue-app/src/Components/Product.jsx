@@ -27,18 +27,9 @@ const Product = () => {
   const Loading = () => {
     return (
       <>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
-        <div className="col-md-3">
-          <Skeleton height={350} />
-        </div>
+      <div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
       </>
     );
   };
