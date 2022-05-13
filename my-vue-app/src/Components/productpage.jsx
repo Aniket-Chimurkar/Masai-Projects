@@ -2,10 +2,10 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router"
 import { NavLink } from "react-router-dom"
-import Skeleton from "react-loading-skeleton"
+// import Skeleton from "react-loading-skeleton"
 import {  useDispatch } from "react-redux"
 import { addCart } from "../Redux/action/index"
-import { delCart } from "../Redux/action/index"
+// import { delCart } from "../Redux/action/index"
 const Productpage=()=>{
     
     const {id} = useParams()
@@ -23,7 +23,7 @@ const Productpage=()=>{
     
       const getProduct = () => {
         setLoading(true);
-        axios.get(`https://fakestoreapi.com/products/${id}`).then((res) => {
+        axios.get(` http://localhost:8080/products/${id}`).then((res) => {
           setproduct(res.data);
           setLoading(false);
         });

@@ -10,6 +10,7 @@ import Cart from './Components/Cart'
 import Checkout from './Components/Checkout'
 import About from './Components/About'
 // import Footer from './Components/Footer'
+// import Signin from './Components/Signin'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route exact path="/cart" element={<Cart/>}/>
       <Route exact path="/checkout" element={<Checkout/>}/>
       <Route exact path="/about" element={<About/>}/>
+     
      </Routes>
     <Footer/>
     

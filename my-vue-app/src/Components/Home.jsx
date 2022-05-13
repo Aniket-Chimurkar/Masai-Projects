@@ -18,7 +18,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
+     
+
       <Product/>
+    
     </div>
   );
 };

@@ -5,11 +5,10 @@ const Footer = () => {
     <div class="row primary">
       <div class="column about">
     
-      <h3>Foolish Developer</h3>
+      <h3>Fake Api Collection</h3>
     
        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-          voluptatem corporis error non,
+       E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click?
       </p>
     
       <div class="social">
@@ -22,7 +21,7 @@ const Footer = () => {
     </div>
     
     <div class="column links">
-    <h3>Some Links</h3>
+    <h3>Support</h3>
     
      <ul>
     
@@ -44,19 +43,19 @@ const Footer = () => {
     
     
     <div class="column links">
-      <h3>Some Links</h3>
+      <h3>City </h3>
        <ul>
         <li>
-         <a href="#faq">F.A.Q</a>
+         <a href="#faq">Mumbai</a>
         </li>
         <li>
-         <a href="#cookies-policy">Cookies Policy</a>
+         <a href="#cookies-policy">Pune</a>
         </li>
         <li>
-        <a href="#terms-of-services">Terms Of Service</a>
+        <a href="#terms-of-services">Bangalore</a>
         </li>
         <li>
-        <a href="#support">Support</a>
+        <a href="#support">Hyadrabad</a>
         </li>
       </ul>
     </div>

@@ -15,7 +15,7 @@ const Product = () => {
   const getData = (Count) => {
     setLoading(true);
     axios
-      .get(`https://fakestoreapi.com/products`)
+      .get(` http://localhost:8080/products?_page=${Count}&_limit=16`)
       .then((res) => {
         setdata(res.data);
         setfilter(res.data);
@@ -49,6 +49,17 @@ const Product = () => {
       setCount(Count - 1);
     }
   };
+
+  const handleSort=(sortBy, type)=>{
+        
+      
+            
+     
+    if(sortBy==="price" && type===1) setfilter((prev)=> [...prev.sort((a,b)=>a.price>b.price?1:-1)])
+    if(sortBy==="price" && type===-1) setfilter((prev)=> [...prev.sort((a,b)=>a.price>b.price?-1:1)])
+
+    
+}
 
   const ShowProducts = () => {
     return (
@@ -84,6 +95,10 @@ const Product = () => {
           >
             Electronics
           </button>
+        </div>
+        <div>
+          <button className="btn btn-outline-dark me-2 mb-5 pb-1"   onClick={()=>{handleSort("price",-1)}} >Price : High to Low </button>
+          <button className="btn btn-outline-dark me-2 mb-5 pb-1"   onClick={()=>{handleSort("price",1)}}>Price : Low to High </button>
         </div>
         {filter.map((product) => {
           return (
@@ -135,7 +150,7 @@ const Product = () => {
             <nav aria-label="Page navigation example">
               <ul class="pagination">
                 <li class="page-item" onClick={handleChange1}>
-                  <a class="page-link" href="#" aria-label="Previous" onClick={handleChange1}>
+                  <a class="page-link"  aria-label="Previous" onClick={handleChange1}>
                     <span aria-hidden="true">&laquo;</span>
                   </a>
                 </li>
@@ -155,7 +170,7 @@ const Product = () => {
                   </a>
                 </li>
                 <li class="page-item" onClick={handleChange}>
-                  <a class="page-link" href="#" aria-label="Next" onClick={handleChange}>
+                  <a class="page-link"  aria-label="Next" onClick={handleChange}>
                     <span aria-hidden="true">&raquo;</span>
                   </a>
                 </li>
