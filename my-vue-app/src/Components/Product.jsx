@@ -15,10 +15,10 @@ const Product = () => {
   const getData = (Count) => {
     setLoading(true);
     axios
-      .get(` http://localhost:8080/products?_page=${Count}&_limit=16`)
+      .get(` https://e-commerce-aniket.herokuapp.com/products`)
       .then((res) => {
-        setdata(res.data);
-        setfilter(res.data);
+        setdata(res.data.product);
+        setfilter(res.data.product);
         setLoading(false);
       });
   };
@@ -104,7 +104,7 @@ const Product = () => {
           return (
             <>
               <div className="col-md-3 mb-4">
-                <div class="card h-100 text-center p-4" key={product.id}>
+                <div class="card h-100 text-center p-4" key={product._id}>
                   <img
                     src={product.image}
                     class="card-img-top"
@@ -117,7 +117,7 @@ const Product = () => {
                     </h5>
                     <p class="card-text">${product.price}</p>
                     <NavLink
-                      to={`/products/${product.id}`}
+                      to={`/products/${product._id}`}
                       className="btn btn-outline-dark ms-2"
                     >
                       Buy Now

@@ -23,11 +23,13 @@ const Productpage=()=>{
     
       const getProduct = () => {
         setLoading(true);
-        axios.get(` http://localhost:8080/products/${id}`).then((res) => {
-          setproduct(res.data);
+        axios.get(`https://e-commerce-aniket.herokuapp.com/products/${id}`).then((res) => {
+          setproduct(res.data.product);
           setLoading(false);
         });
       };
+      console.log(product)
+
 
       const Loading =()=>{
           return(
