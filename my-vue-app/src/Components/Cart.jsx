@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux"
 import { NavLink } from "react-router-dom"
 import { delCart } from "../Redux/action/index"
 // import { addCart } from "../Redux/action"
+import { useNavigate } from "react-router-dom";
+
 const Cart =()=>{
   const state = useSelector((state)=>state.handleCart)
     const dispatch = useDispatch()
@@ -10,8 +12,12 @@ const Cart =()=>{
     const handleclose=(item)=>{
        dispatch(delCart(item))
     }
+    
      
     const cartItems = (cartItem)=>{
+
+    
+
         return(
             <div className="px4 my-5 bg-light rounded-3" key={cartItem.id}>
                  <div className="container py-4">

@@ -44,7 +44,7 @@ const Navbar = () => {
           </ul>
          <div className="buttons">
           <NavLink to="/login" className="btn btn-outline-dark me-2">  <i className="fa fa-sign-in me-1" aria-hidden="true"></i>Login</NavLink>
-          <NavLink to="/register" className="btn btn-outline-dark me-2">  <i className="fa fa-user-plus " aria-hidden="true"></i>Sign-up</NavLink>
+          <NavLink to="/signup" className="btn btn-outline-dark me-2">  <i className="fa fa-user-plus " aria-hidden="true"></i>Sign-up</NavLink>
           <NavLink to="/cart" className="btn btn-outline-dark me-2">  <i className="fa fa-shopping-cart " aria-hidden="true"></i>Cart({state.length})</NavLink>
          </div>
         </div>
